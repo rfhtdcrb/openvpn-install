@@ -38,12 +38,6 @@ Supported distros are Ubuntu, Debian, AlmaLinux, Rocky Linux, CentOS and Fedora.
 	exit
 fi
 
-if [[ "$os" == "ubuntu" && "$os_version" -lt 2204 ]]; then
-	echo "Ubuntu 22.04 or higher is required to use this installer.
-This version of Ubuntu is too old and unsupported."
-	exit
-fi
-
 if [[ "$os" == "debian" ]]; then
 	if grep -q '/sid' /etc/debian_version; then
 		echo "Debian Testing and Debian Unstable are unsupported by this installer."
